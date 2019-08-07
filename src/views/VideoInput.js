@@ -162,7 +162,6 @@ class VideoInput extends Component {
                   width={WIDTH}
                   height={HEIGHT}
                   ref={this.webcam}
-                  screenshotFormat="image/jpeg"
                   videoConstraints={videoConstraints}
                 />
               </div>

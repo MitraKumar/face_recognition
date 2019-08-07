@@ -23,7 +23,7 @@ class ImageInput extends Component {
     this.state = { ...INIT_STATE, faceMatcher: null };
   }
 
-  componentWillMount = async () => {
+  componentDidMount = async () => {
     await loadModels();
     this.setState({ faceMatcher: await createMatcher(JSON_PROFILE) });
     await this.handleImage(this.state.imageURL);

@@ -24,7 +24,7 @@ class VideoInput extends Component {
     };
   }
 
-  componentWillMount = async () => {
+  componentDidMount = async () => {
     await loadModels();
     this.setState({ faceMatcher: await createMatcher(JSON_PROFILE) });
     this.setInputDevice();
